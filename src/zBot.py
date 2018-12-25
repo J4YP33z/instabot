@@ -1,17 +1,15 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-# import datetime
-# import logging
-# import signal
+
 import atexit
 import itertools
+import json
+import random
+import sys
 import time
 import requests
-import random
-import time
-import json
-import sys
+
 
 '''
 daily limits:
@@ -65,6 +63,7 @@ tag_list=[
 #items
 'coffee', 'tea', 'mug', 'sweater', 'hoodie']
 
+
 url = 'https://www.instagram.com/'
 url_tag = 'https://www.instagram.com/explore/tags/'
 url_likes = 'https://www.instagram.com/web/likes/%s/like/'
@@ -89,7 +88,6 @@ def requestData(source):
   all_data_end = text.find(endingTxt, all_data_start + 1)
   json_str = text[(all_data_start + startingTxt_len + 1) : all_data_end]
   return json.loads(json_str)
-
 
 def getMedia():
   all_data = requestData('https://www.instagram.com/#')
@@ -119,15 +117,8 @@ def generate_comment():
                           '❤️❤️❤️', '💯',
                           '💯💯💯', '👏', '👏👏👏'])
 
-# def writeCounters():
-  # print(logging...)
-  # open file
-  # if current date same as file date read counters
-  # else set counters to 0
-
 
 random.seed()
-# atexit.register(writeCounters)
 
 
 mode = 0
@@ -190,7 +181,7 @@ while(1):
       print('getting feed...')
       time.sleep(5)
       unfollow_counter = 0
-      media_on_feed = getMedia(); # get recent media
+      media_on_feed = getMedia() # get recent media
       for i in range(0, len(media_on_feed)):
         current_user=media_on_feed[i]["owner"]["username"]
         current_id=media_on_feed[i]["owner"]["id"]
@@ -272,10 +263,3 @@ def get_user_id_by_login(self, user_name):
   id_user = all_data['user']['id']
   return id_user  
 '''
-
-
-
-
-
-
-
