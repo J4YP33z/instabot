@@ -1,0 +1,13 @@
+[CONFIG]
+login = ***REMOVED***
+password = ***REMOVED***
+tag_list=["sanjaymentoringfamily", "sanjaytolani", "28000days", "theperfectmindset", "theclosingplaybook", "theobjectionplaybook", "speaker", "author", "l:274029466", "l:31503043", "l:639377", "l:241916856"]
+tag_blacklist=["follow4follow", "f4f"]
+
+
+# hashes indicate the start of an IGNORED line
+
+# sg, sg, l:274029466
+# kl, my, l:31503043
+# Manila, ph, l:639377
+# Jakarta, id, l:241916856
